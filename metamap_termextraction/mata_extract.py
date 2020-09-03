@@ -9,8 +9,9 @@ import tqdm
 
 def getMeta(string):
     '''
-    Processing meta output; 
-    return cui and its perferred name
+	Processing meta output; 
+	arg: output string
+	return cui and its perferred name
     
     '''
     import re 
@@ -55,12 +56,12 @@ def meta_clean(df):
 
 def meta_term_summary(df):
     '''
-	Get frequency of metamap concept of each participants
+    	Get frequency of metamap concept of each participants
 	
-    arg: cleaned dataframe
+   	arg: cleaned dataframe
 	return: 
-	        1. subj_seq_meta_dict: including sequence information for role split
-			2. subj_meta_dict: frquency of each concept in a visit
+	1. subj_seq_meta_dict: including sequence information for role split
+	2. subj_meta_dict: frquency of each concept in a visit
     
     '''
     # map subject-seq-meta concept
@@ -97,10 +98,10 @@ def meta_term_summary(df):
 # sort the records by frequency
 def sort_nestdict(data):
     '''
-    Sort by meta concept count for each subject
+	Sort by meta concept count for each subject
 
-    arg: nested dictionary from json files
-    return: name and type frequency 
+	arg: nested dictionary from json files
+	return: dict, name and type frequency 
 
     
     '''
